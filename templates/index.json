@@ -81,6 +81,9 @@
     },
     "custom-featured-banner": {
       "type": "custom-featured-banner"
+    },
+    "multi-item-testimonials": {
+      "type": "multi-item-testimonials"
     }
 
   },
@@ -88,6 +91,7 @@
     "image_banner",
     "featured_collection",
     "custom-banner", 
-    "custom-featured-banner"
+    "custom-featured-banner",
+    "multi-item-testimonials"
   ]
 }

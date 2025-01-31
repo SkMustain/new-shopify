@@ -1,0 +1,40 @@
+<section class="testimonials">
+    {% for block in section.blocks %}
+      <div class="testimonial">
+        <p>{{ block.settings.quote }}</p>
+        <h4>- {{ block.settings.author }}</h4>
+      </div>
+    {% endfor %}
+  </section>
+
+
+
+  {% schema %}
+{
+  "name": "Multi Item Testimonials",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Testimonial Text"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author Name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi Item Testimonials"
+    }
+  ]
+}
+{% endschema %}
