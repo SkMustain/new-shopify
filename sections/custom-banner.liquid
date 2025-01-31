@@ -1,0 +1,38 @@
+<section class="custom-banner">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.description }}</p>
+  </section>
+  
+  <style>
+    .custom-banner {
+      text-align: center;
+      padding: 50px;
+      background-color: #f5f5f5;
+    }
+  </style>
+  
+  {% schema %}
+  {
+    "name": "Custom Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Banner Title",
+        "default": "Welcome to Our Store"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Banner Description",
+        "default": "This is a custom banner section."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Banner"
+      }
+    ]
+  }
+  {% endschema %}
+  

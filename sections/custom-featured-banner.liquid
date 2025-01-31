@@ -1,0 +1,80 @@
+<section class="custom-banner" style="background: {{ section.settings.bg_color }}">
+    <div class="custom-banner-content">
+      <h2>{{ section.settings.title }}</h2>
+      <p>{{ section.settings.description }}</p>
+      {% if section.settings.button_label != blank %}
+        <a href="{{ section.settings.button_link }}" class="banner-button">{{ section.settings.button_label }}</a>
+      {% endif %}
+    </div>
+  </section>
+  
+  <style>
+    .custom-banner {
+      text-align: center;
+      padding: 50px;
+      color: {{ section.settings.text_color }};
+    }
+    .banner-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: {{ section.settings.button_color }};
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+  
+  {% schema %}
+  {
+    "name": "Featured Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Banner Title",
+        "default": "Welcome to Our Store"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Banner Description",
+        "default": "This is a customizable featured banner."
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#f5f5f5"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#333333"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "label": "Button Label",
+        "default": "Shop Now"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button Background Color",
+        "default": "#ff5722"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Featured Banner"
+      }
+    ]
+  }
+  {% endschema %}
+  
